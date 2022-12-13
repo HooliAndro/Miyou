@@ -48,7 +48,7 @@ function MalAnimeDetails() {
     });
     setAnilistResponse(aniRes.data.data.Media);
     let malRes = await axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}api/getidinfo?malId=${id}`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}meta/anilist/info/${id}`)
       .catch((err) => {
         setNotAvailable(true);
       });
